@@ -1,0 +1,94 @@
+.redball{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+}
+
+.redball div{
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+    border-radius: 50%;
+    background-color: red;
+    animation: redball 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+    animation-iteration-count: infinite;
+}
+
+.redball div:nth-child(1){
+    left: 10px;
+    animation-delay: -0.24s;
+}
+.redball div:nth-child(2){
+    left: 30px;
+    animation-delay: -0.12s;
+}
+.redball div:nth-child(3){
+    left: 50px;
+    animation-delay: 0s;
+}
+  
+@keyframes redball {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    85% {
+        transform: translate3d(0, 10px, 0);
+        border-radius: 50%;
+        height: 10px;
+    }
+    100% {
+        transform: translate3d(0, 20px, 0);
+        border-radius: 50%;
+        height: 3px;
+    }
+}
+
+.square{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+}
+
+.square div{
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+    background-color: red;
+    animation: square 0.5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
+    animation-iteration-count: infinite;
+}
+
+.square div:nth-child(1){
+    left: 10px;
+    animation-delay: -0.24s;
+}
+.square div:nth-child(2){
+    left: 30px;
+    animation-delay: -0.12s;
+}
+.square div:nth-child(3){
+    left: 50px;
+    animation-delay: 0s;
+}
+  
+@keyframes square {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    85% {
+        transform: translate3d(0, 10px, 0);
+        height: 10px;
+    }
+    100% {
+        transform: translate3d(0, 20px, 0);
+        height: 2px;
+    }
+}
